@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Uzsakymas{% endblock %}
+
+{% block content %}
+
+<p>Pavadinimas: {{ order.customer }} </p>
+<p>Data: {{ order.date}} </p>
+<p>Busena: {{ order.status}} </p>
+<hr>
+{% for line in order.lines.all %}
+<p>{{line.product}}({{line.product.price}}) - {{line.qty}}</p>
+{% endfor %}
+{% endblock %}
