@@ -3,8 +3,10 @@
 {% block title %}Prekė{% endblock %}
 
 {% block content %}
-{% for product in products%}
-<p>{{ product }} </p>
+
+<p>Pavadinimas: {{ product.name }} </p>
+<p>Kaina: {{ product.price}} </p>
+
 <hr>
-{% endfor %}
+
 {% endblock %}
